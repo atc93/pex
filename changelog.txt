@@ -1,0 +1,31 @@
+December 12 2020
+=====================
+
+-- general --
+
+* renamed GitHub repository name to pex (for Pseudo-EXperiment)
+* added requirements.txt file containing list of required modules
+* added this changelog.txt file
+
+-- single_indicator_threshold_pseudo_experiments notebook --
+
+* fetching historical data:
+  - replaced the class file coinbase_market.py by market.py
+  - using ccxt module, expanded fetching data from any exchange supported by ccxt (previous code version used coinbase only)
+* indicator threshold crossing:
+  - added the use of qtpylib library crossing function
+  - buys and sells are now trigger via above/below threshold crossing (previous code version used a simple > or < check)
+* indicator definition:
+  - added 'open', 'high', and 'low' parameters to compute the indicator (previous code version only used 'close')
+* datetime pseudo-experiment scan:
+  - added an option to uniformly draw start/end datetime (previous code version had random datetime drawing biased toward recent datetimes only)
+* updated output CVS file name to include more relevant information
+* miscellaneous small updates
+
+-- single_indicator_threshold_analyze  --
+
+* replaced 'cash' observable with 'return' variable
+* added second order polynomial fit to return=f(n_days) and associated observables/plots
+* added interactive plotly plot for <profit_per_day> and <profit_per_day>/std(profit_per_day)
+* failed attempt at using ipywidgets for widgets and interactive plot (code is left in notebook but commented out)
+* miscellaneous small updates
