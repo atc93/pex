@@ -1,0 +1,10 @@
+TA_Lib
+ccx
+matplotlib
+numpy
+pandas
+plotly
+qtpylib
+seaborn
+tqdm
+
